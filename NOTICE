@@ -1,0 +1,10 @@
+The first release of simcount was developed by Yunseong Nam, Yuan Su,
+and Dmitri Maslov in 2018.
+
+The approximate quantum Fourier transform implementations contained 
+in this repository are described in detail in the paper
+
+* Yunseong Nam, Yuan Su, and Dmitri Maslov,
+  Approximate Quantum Fourier Transform with 
+  O(n log(n)) T gates, May 2018. Available from
+  https://arxiv.org/abs/1805.04645.
