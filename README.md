@@ -1,1 +1,75 @@
 # QFT
+
+Approximate Quantum Fourier Transform (AQFT) with O(n log(n)) T gates
+
+This repository contains:
+
+* Quantum circuits of the AQFT with O(n log(n)) T gates
+  in a custom notation in the netlist representation.
+
+Explicit descriptions of the algorithms, implementation details, and
+original references can be found in the following paper.
+
+* Yunseong Nam, Yuan Su, and Dmitri Maslov
+  Approximate Quantum Fourier Transform with O(n log(n)) T gates
+  May 2018. Available from
+  https://arxiv.org/abs/1805.04645.
+
+## License
+
+* The code is released under the Apache License. See the LICENSE and
+  NOTICE files for more information.
+
+## Notations
+
+All gates are of the following form
+
+        :G [target(s)] [control(s)] {classical control(s)} Angle
+
+* ":" := Prefix for a gate
+* "G" := Gate type
+* "[]" := Qubit register
+* "{}" := Classical register
+* "Angle" := Optional angle (default pi)
+
+Available gate types are
+
+* i := Initialization to 0
+* m := Measurement
+* h := Hadamard gate
+* rz := RZ gate
+* s := S gate
+* si := Inverse S gate
+* t := T gate
+* ti := Inverse T gate
+
+The exceptional case in the notation is a CNOT gate.
+In this special case, the notation is
+
+        :cnot [control] [target] {classical control(s)}
+
+Note that the control qubit comes first.
+
+## Circuits
+
+The circuits are given in the ASCII format. The circuits correspond
+to the AQFT of sizes 8, 16, 32, 64, 128, 256, 512, 1024, 2048, and
+4096. All cases considered here use b = 13, i.e., those controlled
+z^a rotation gates with rotation angle less than pi/2^b are removed.
+The circuit optimizations were carried out using the techniques detailed 
+in the following paper.
+
+* Yunseong Nam, Neil J. Ross, Yuan Su, Andrew M. Childs, and Dmitri
+  Maslov. Automated optimization of large quantum circuits with
+  continuous parameters. October 2017. Available from
+  https://arxiv.org/abs/1710.07345.
+
+## Contributors
+
+* Yunseong Nam
+* Yuan Su
+* Dmitri Maslov
+
+## Contact
+
+Questions and comments can be addressed to: nam@ionq.co
