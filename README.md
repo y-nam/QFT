@@ -50,6 +50,14 @@ In this special case, the notation is
 
 Note that the control qubit comes first.
 
+The two preceding lines in each circuit file
+
+        // max qubit #
+        // ops count #
+        
+denote the total number of qubits and the number of
+gates in a given circuit file.
+
 ## Circuits
 
 The circuits are given in the ASCII format. The circuits correspond
@@ -63,6 +71,24 @@ in the following paper.
   Maslov. Automated optimization of large quantum circuits with
   continuous parameters. October 2017. Available from
   https://arxiv.org/abs/1710.07345.
+  
+Filenames for the AQFT circuits are
+
+        Postoptim_QFT#_bandwdith#
+        
+The first # is the size of the AQFT.
+The second # is the aforementioned b parameter.
+
+Filenames for the Repeat-Until-Success (RUS) circuits are
+
+        Postoptim_RUS#.txt
+        
+The # is the angle parameter. The angle that each RUS
+approximates is pi/2^#.
+
+Note that each of the RZ gates in the AQFT circuits, 
+used to prepare the special state |\Upsilon>, is exercised 
+by using appropriate RUS circuits.
 
 ## Contributors
 
