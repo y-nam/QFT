@@ -81,7 +81,7 @@ The second # is the aforementioned b parameter.
 
 Filenames for the Repeat-Until-Success (RUS) circuits are
 
-        Postoptim_RUS#.txt
+        RUS#.txt
         
 The # is the angle parameter. The angle that each RUS
 approximates is pi/2^#.
