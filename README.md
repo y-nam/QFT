@@ -12,8 +12,8 @@ original references can be found in the following paper.
 
 * Yunseong Nam, Yuan Su, and Dmitri Maslov
   Approximate Quantum Fourier Transform with O(n log(n)) T gates
-  May 2018. Available from
-  https://arxiv.org/abs/1805.04645.
+  March 2018. Available from
+  https://arxiv.org/abs/1803.04933.
 
 ## License
 
